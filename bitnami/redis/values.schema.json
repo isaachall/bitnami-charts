@@ -571,6 +571,11 @@
                     "description": "Redis&reg; master pods' priorityClassName",
                     "default": ""
                 },
+                "runtimeClassName": {
+                    "type": "string",
+                    "description": "Redis&reg; master pods' runtimeClassName",
+                    "default": ""
+                },
                 "automountServiceAccountToken": {
                     "type": "boolean",
                     "description": "Mount Service Account token in pod",
@@ -1283,6 +1288,11 @@
                 "priorityClassName": {
                     "type": "string",
                     "description": "Redis&reg; replicas pods' priorityClassName",
+                    "default": ""
+                },
+                "runtimeClassName": {
+                    "type": "string",
+                    "description": "Redis&reg; replicas pods' runtimeClassName",
                     "default": ""
                 },
                 "podManagementPolicy": {

@@ -74,6 +74,9 @@ spec:
       {{- if .Values.master.priorityClassName }}
       priorityClassName: {{ .Values.master.priorityClassName | quote }}
       {{- end }}
+      {{- if .Values.master.runtimeClassName }}
+      runtimeClassName: {{ .Values.master.runtimeClassName | quote }}
+      {{- end }}
       {{- if .Values.master.affinity }}
       affinity: {{- include "common.tplvalues.render" (dict "value" .Values.master.affinity "context" $) | nindent 8 }}
       {{- else }}

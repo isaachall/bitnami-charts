@@ -357,6 +357,10 @@ master:
   ## @param master.priorityClassName Redis&reg; master pods' priorityClassName
   ##
   priorityClassName: ""
+  ## @param master.runtimeClassName Redis&reg; master pods' runtimeClassName
+  ## ref: https://kubernetes.io/docs/concepts/containers/runtime-class/
+  ##
+  runtimeClassName: ""
   ## @param master.automountServiceAccountToken Mount Service Account token in pod
   ##
   automountServiceAccountToken: false
@@ -838,6 +842,10 @@ replica:
   ## @param replica.priorityClassName Redis&reg; replicas pods' priorityClassName
   ##
   priorityClassName: ""
+  ## @param replica.runtimeClassName Redis&reg; replicas pods' runtimeClassName
+  ## ref: https://kubernetes.io/docs/concepts/containers/runtime-class/
+  ##
+  runtimeClassName: ""
   ## @param replica.podManagementPolicy podManagementPolicy to manage scaling operation of %%MAIN_CONTAINER_NAME%% pods
   ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#pod-management-policies
   ##

@@ -72,6 +72,9 @@ spec:
       {{- if .Values.replica.priorityClassName }}
       priorityClassName: {{ .Values.replica.priorityClassName | quote }}
       {{- end }}
+      {{- if .Values.replica.runtimeClassName }}
+      runtimeClassName: {{ .Values.replica.runtimeClassName | quote }}
+      {{- end }}
       {{- if .Values.replica.affinity }}
       affinity: {{- include "common.tplvalues.render" (dict "value" .Values.replica.affinity "context" $) | nindent 8 }}
       {{- else }}
